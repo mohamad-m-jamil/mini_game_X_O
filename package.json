@@ -1,0 +1,17 @@
+{
+  "name": "my-card-game",
+  "version": "1.0.0",
+  "description": "A simple multiplayer card game using socket.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "socket.io": "^4.5.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "keywords": []
+}
