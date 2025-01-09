@@ -36,6 +36,8 @@ h1 {
     align-items: center;
     font-size: 24px;
     cursor: pointer;
+    border: #ddd solid 1px;
+    border-radius: 4px;
 }
 
 .cell:hover {
@@ -58,5 +60,15 @@ h1 {
 
 #message {
     margin-top: 10px;
+    font-weight: bold;
+}
+
+.red {
+    color: red;
+    font-weight: bold;
+}
+
+.blue {
+    color: blue;
     font-weight: bold;
 }

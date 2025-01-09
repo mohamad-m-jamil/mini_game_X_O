@@ -26,6 +26,15 @@ function handleCellClick(event) {
     board[index] = currentPlayer;
     cell.textContent = currentPlayer;
 
+    // Add styles for X and O
+    if (currentPlayer === 'X') {
+        cell.classList.add('red'); // Apply the red style for X
+        document.body.style.backgroundColor = 'red'; // Change background to red
+    } else {
+        cell.classList.add('blue'); // Apply the blue style for O
+        document.body.style.backgroundColor = 'blue'; // Change background to blue
+    }
+
     checkWinner();
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
 }
@@ -53,9 +62,12 @@ function resetGame() {
     message.textContent = '';
     cells.forEach(cell => {
         cell.textContent = '';
+        cell.classList.remove('red', 'blue'); // Remove styles
     });
+    document.body.style.backgroundColor = ''; // Reset background color
 }
 
+// Add event listeners
 cells.forEach(cell => {
     cell.addEventListener('click', handleCellClick);
 });
